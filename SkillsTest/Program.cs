@@ -15,7 +15,7 @@
 
             //Opgave 7: validering har ændret værdier for at teste validerings metoden
             DateTime start2 = new DateTime(2024, 6, 15, 16, 00, 0);
-            DateTime end2 = new DateTime(2024, 6, 15, 17, 30, 0);
+            DateTime end2 = new DateTime(2024, 6, 14, 17, 30, 0);
             Booking bk2 = new Booking(2, start2, end2, 20);
 
             DateTime start3 = new DateTime(2024, 6, 15, 18, 00, 0);

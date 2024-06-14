@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,31 +69,77 @@ namespace SkillsTest
 
 
 
-        //Opgave 7
+        ////Opgave 7
+        //public bool Validate() {
+        //    foreach (Booking booking in _booking.Values)
+        //    {
+        //        if (!booking.BookingDurationOK)
+        //        {
+        //            Console.WriteLine($"Booking ID {booking.ID} is invalid: Duration is longer than 2 hours.");
+        //            return false;
+        //        }
+
+        //        if (booking.End < booking.Start)
+        //        {
+        //            Console.WriteLine($"Booking ID {booking.ID} is invalid: End time is before start time.");
+        //            return false;
+        //        }
+
+        //        if (booking.Participants > 22)
+        //        {
+        //            Console.WriteLine($"Booking ID {booking.ID} is invalid: More than 22 participants.");
+        //            return false;
+        //        }
+        //    }
+        //    return true;
+        //}
+
+        //Opgave 8
         public bool Validate() {
             foreach (Booking booking in _booking.Values)
             {
-                if (!booking.BookingDurationOK)
+                try
                 {
-                    Console.WriteLine($"Booking ID {booking.ID} is invalid: Duration is longer than 2 hours.");
-                    return false;
+                    if (!booking.BookingDurationOK)
+                    {
+                        Console.WriteLine($"Booking ID {booking.ID} is invalid: Duration is longer than 2 hours.");
+                    }
+                    
+                       
                 }
-
-                if (booking.End < booking.Start)
+                
+                catch (Exception ex) {
+                    Console.WriteLine($"Booking ID {booking.ID} is invalid: Duration is longer than 2 hours.");
+                }
+                try
+                {
+                    if (booking.End < booking.Start)
+                    {
+                        Console.WriteLine($"Booking ID {booking.ID} is invalid: End time is before start time.");
+                        
+                    }
+                }
+                catch (Exception ex)
                 {
                     Console.WriteLine($"Booking ID {booking.ID} is invalid: End time is before start time.");
-                    return false;
                 }
-
-                if (booking.Participants > 22)
+                try
+                {
+                    if (booking.Participants > 22)
+                    {
+                        Console.WriteLine($"Booking ID {booking.ID} is invalid: More than 22 participants.");
+                        return false;
+                    }
+                }
+                catch (Exception ex)
                 {
                     Console.WriteLine($"Booking ID {booking.ID} is invalid: More than 22 participants.");
-                    return false;
                 }
+
+
             }
             return true;
         }
-
 
 
 
