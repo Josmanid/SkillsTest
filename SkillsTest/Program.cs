@@ -19,6 +19,9 @@
 
             Console.WriteLine("Opgave 3.");
 
+            GymHall gmh = new GymHall();
+
+            Console.WriteLine(gmh);
 
 
 
