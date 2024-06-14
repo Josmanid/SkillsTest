@@ -13,16 +13,35 @@
             DateTime end1 = new DateTime(2024, 6, 15, 14, 30, 0);
             Booking bk1 = new Booking(1, start1, end1, 12);
 
+            DateTime start2 = new DateTime(2024, 6, 15, 15, 30, 0);
+            DateTime end2 = new DateTime(2024, 6, 15, 17, 30, 0);
+            Booking bk2 = new Booking(2, start2, end2, 10);
+
+            DateTime start3 = new DateTime(2024, 6, 15, 18, 00, 0);
+            DateTime end3 = new DateTime(2024, 6, 15, 20, 00, 0);
+            Booking bk3 = new Booking(3, start3, end3, 8);
+
             Console.WriteLine(bk1);
 
             Console.WriteLine("");
 
-            Console.WriteLine("Opgave 3.");
+            Console.WriteLine("Opgave 3 og 4.");
 
-            GymHall gmh = new GymHall();
+            GymHall gymDic = new GymHall();
 
-            Console.WriteLine(gmh);
-
+            Console.WriteLine("Vores gymbooking er lavet " + gymDic.ID);
+            Console.WriteLine();
+            Console.WriteLine("Register reservationer og display dem:");
+            gymDic.RegisterBooking(bk1);
+            gymDic.RegisterBooking(bk2);
+            gymDic.RegisterBooking(bk3);
+            gymDic.PrintBookings();
+         
+            Console.WriteLine();
+            Console.WriteLine("Fjern booking 1 og derefter display den nye liste");
+            gymDic.RemoveBooking(bk1);
+            gymDic.PrintBookings();
+          
 
 
 
