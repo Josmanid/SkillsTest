@@ -133,7 +133,7 @@ namespace SkillsTest
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Booking ID {booking.ID} is invalid: More than 22 participants.");
+                    Console.WriteLine($"Booking ID {booking.ID} is invalid: End time is before start time.");
                 }
 
 
