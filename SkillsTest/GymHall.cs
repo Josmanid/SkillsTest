@@ -34,13 +34,13 @@ namespace SkillsTest
             Name = "Højen Gymnastiksal";
         }
 
-
+        // opgave 6 test af Totalbookings
         public override string ToString() {
          
             return $"Welcome to {Name}! Year: {ID} Total Bookings: {TotalBookings}";
         }
 
-        //Metoder opgave 4
+        //Metoder opgave 4 CRUD
 
         public void RegisterBooking(Booking booking) {
            
@@ -68,8 +68,30 @@ namespace SkillsTest
 
 
 
+        //Opgave 7
+        public bool Validate() {
+            foreach (Booking booking in _booking.Values)
+            {
+                if (!booking.BookingDurationOK)
+                {
+                    Console.WriteLine($"Booking ID {booking.ID} is invalid: Duration is longer than 2 hours.");
+                    return false;
+                }
 
+                if (booking.End < booking.Start)
+                {
+                    Console.WriteLine($"Booking ID {booking.ID} is invalid: End time is before start time.");
+                    return false;
+                }
 
+                if (booking.Participants > 22)
+                {
+                    Console.WriteLine($"Booking ID {booking.ID} is invalid: More than 22 participants.");
+                    return false;
+                }
+            }
+            return true;
+        }
 
 
 

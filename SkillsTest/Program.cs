@@ -13,9 +13,10 @@
             DateTime end1 = new DateTime(2024, 6, 23, 14, 30, 0);
             Booking bk1 = new Booking(1, start1, end1, 12);
 
-            DateTime start2 = new DateTime(2024, 6, 15, 15, 00, 0);
+            //Opgave 7: validering har ændret værdier for at teste validerings metoden
+            DateTime start2 = new DateTime(2024, 6, 15, 16, 00, 0);
             DateTime end2 = new DateTime(2024, 6, 15, 17, 30, 0);
-            Booking bk2 = new Booking(2, start2, end2, 10);
+            Booking bk2 = new Booking(2, start2, end2, 20);
 
             DateTime start3 = new DateTime(2024, 6, 15, 18, 00, 0);
             DateTime end3 = new DateTime(2024, 6, 15, 20, 00, 0);
@@ -46,6 +47,14 @@
             Console.WriteLine("opgave 6: test af gymhall properties der skal være 2 bookinger efter der er blevet fjernet en!");
             Console.WriteLine(gymDic);
 
+
+            Console.WriteLine("");
+            Console.WriteLine("opgave 7 Se toppen");
+
+            gymDic.Validate();
+
+            Console.WriteLine("");
+            Console.WriteLine("opgave 8 Se toppen");
 
 
 
