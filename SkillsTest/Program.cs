@@ -49,12 +49,11 @@
 
 
             Console.WriteLine("");
-            Console.WriteLine("opgave 7 Se toppen");
+            Console.WriteLine("opgave 7 og 8 Se toppen plus mine 2 metoder klassen GymHall");
 
             gymDic.Validate();
 
-            Console.WriteLine("");
-            Console.WriteLine("opgave 8 Se toppen");
+            
 
 
 
