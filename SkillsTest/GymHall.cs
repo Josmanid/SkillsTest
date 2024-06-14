@@ -16,6 +16,14 @@ namespace SkillsTest
         public string Phone { get; set; }
         public string Email { get; set; }
         Dictionary<int, Booking> _booking;
+        //opgave 6
+        public int TotalBookings
+        {
+            get
+            {
+                return _booking.Count;
+            }
+        }
 
         public GymHall()
         {
@@ -27,7 +35,10 @@ namespace SkillsTest
         }
 
 
-      
+        public override string ToString() {
+         
+            return $"Welcome to {Name}! Year: {ID} Total Bookings: {TotalBookings}";
+        }
 
         //Metoder opgave 4
 

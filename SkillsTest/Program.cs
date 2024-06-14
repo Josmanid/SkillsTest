@@ -5,7 +5,7 @@
         static void Main(string[] args) {
 
 
-            Console.WriteLine("Opgave 2.");
+            Console.WriteLine("Opgave 2.+opgave 6");
 
             // Test klassen ved at oprette nogle instanser af den i C# filen program.cs og skriv dem ud til 
             //konsollen med Console.WriteLine
@@ -41,9 +41,10 @@
             Console.WriteLine("Fjern booking 1 og derefter display den nye liste");
             gymDic.RemoveBooking(bk1);
             gymDic.PrintBookings();
-          
 
-
+            Console.WriteLine("");
+            Console.WriteLine("opgave 6: test af gymhal properties");
+            Console.WriteLine(gymDic);
 
 
 
