@@ -36,14 +36,14 @@
             gymDic.RegisterBooking(bk2);
             gymDic.RegisterBooking(bk3);
             gymDic.PrintBookings();
-         
+           
             Console.WriteLine();
             Console.WriteLine("Fjern booking 1 og derefter display den nye liste");
             gymDic.RemoveBooking(bk1);
             gymDic.PrintBookings();
 
             Console.WriteLine("");
-            Console.WriteLine("opgave 6: test af gymhal properties");
+            Console.WriteLine("opgave 6: test af gymhall properties der skal være 2 bookinger efter der er blevet fjernet en!");
             Console.WriteLine(gymDic);
 
 

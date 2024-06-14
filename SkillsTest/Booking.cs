@@ -42,7 +42,7 @@ namespace SkillsTest
 
 
         public override string ToString() {
-            string message = "Your booking Id is: " + ID + " You booking starts at: " + Start+" And ends at: "+End+" booking overskrider ikke 2 timer: "+BookingDurationOK+ " og foregår ikke på en søndag: "+IsSundayBooking;
+            string message = "Your booking Id is: " + ID + " You booking starts at: " + Start+" And ends at: "+End+" bookingens varighed er ok: "+BookingDurationOK+ " og foregår ikke på en søndag: "+IsSundayBooking;
             return message;
         }
 
