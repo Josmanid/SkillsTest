@@ -19,16 +19,15 @@ namespace SkillsTest
 
         public GymHall()
         {
+            //Levetiden for Booking objekterne er bundet til GymHall.
+            //Når en GymHall bliver slettet, vil alle dets Booking objekter typisk også blive slettet. derfor komposition.
             _booking = new Dictionary<int, Booking>();
             ID = DateTime.Now.Year;
             Name = "Højen Gymnastiksal";
         }
 
 
-        //public override string ToString() {
-        //    string Message = "Welcome to " + Name + " År " + ID + "You have booked the following team! : " + _booking;
-        //    return Message;
-        //}
+      
 
         //Metoder opgave 4
 
