@@ -9,11 +9,11 @@
 
             // Test klassen ved at oprette nogle instanser af den i C# filen program.cs og skriv dem ud til 
             //konsollen med Console.WriteLine
-            DateTime start1 = new DateTime(2024, 6, 15, 12, 30, 0);
-            DateTime end1 = new DateTime(2024, 6, 15, 14, 30, 0);
+            DateTime start1 = new DateTime(2024, 6, 23, 13, 00, 0);//21 - 06 - 2024 13:00:00
+            DateTime end1 = new DateTime(2024, 6, 23, 14, 30, 0);
             Booking bk1 = new Booking(1, start1, end1, 12);
 
-            DateTime start2 = new DateTime(2024, 6, 15, 15, 30, 0);
+            DateTime start2 = new DateTime(2024, 6, 15, 15, 00, 0);
             DateTime end2 = new DateTime(2024, 6, 15, 17, 30, 0);
             Booking bk2 = new Booking(2, start2, end2, 10);
 

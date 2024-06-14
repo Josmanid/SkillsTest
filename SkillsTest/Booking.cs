@@ -9,11 +9,26 @@ namespace SkillsTest
 {
     internal class Booking
     {
-
+       
         public int ID { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
         public int Participants { get; set; }
+        public bool BookingDurationOK
+        {
+            get
+            {
+                return Start.AddHours(2) >= End;
+            }
+        }
+        public bool IsSundayBooking
+        {
+            get
+            {
+                //Spørger om det ikke foregår på en søndag
+                return Start.DayOfWeek != DayOfWeek.Sunday;
+            }
+        }
 
 
 
@@ -27,9 +42,13 @@ namespace SkillsTest
 
 
         public override string ToString() {
-            string message = "Your booking Id is: " + ID + " You booking starts at: " + Start+" And ends at: "+End+" with the following number of participants: "+Participants;
+            string message = "Your booking Id is: " + ID + " You booking starts at: " + Start+" And ends at: "+End+" booking overskrider ikke 2 timer: "+BookingDurationOK+ " og foregår ikke på en søndag: "+IsSundayBooking;
             return message;
         }
+
+
+
+
 
 
     }
